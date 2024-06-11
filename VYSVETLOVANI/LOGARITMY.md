@@ -1,20 +1,27 @@
-# 1. Definice logaritmu
+Použití přirozeného logaritmu (\(\ln\)):
 
-Logaritmus základu \( b \) z čísla \( x \), značený jako \( \log_b(x) \), je exponent, ke kterému je potřeba základ \( b \) zvednout, aby bylo rovno \( x \). Matematicky to lze vyjádřit jako \( \log_b(x) = y \), což je ekvivalentní s \( b^y = x \).
+Začneme přepsáním rovnice \(e^x = a\) pomocí přirozeného logaritmu:
+\[
+\ln(e^x) = \ln(a)
+\]
+Využijeme vlastnosti logaritmu, že \(\ln(e^x) = x\):
+\[
+x = \ln(a)
+\]
+Takto získáme přesný výraz pro \(x\), který vyhovuje původní rovnici.
 
-### 2. Vlastnosti logaritmů
+Numerické řešení:
 
-### a. Logaritmus součinu
-\[ \log_b(xy) = \log_b(x) + \log_b(y) \]
+Pokud není možné řešit rovnici pomocí přirozeného logaritmu, můžeme použít numerické metody.
+Jednou z možností je Newtonova metoda. Začneme s počátečním odhadem \(x_0\) a iterativně upravujeme hodnotu \(x\) podle vztahu:
+\[
+x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}
+\]
+Kde \(f(x) = e^x - a\) je funkce, kterou potřebujeme najít kořen, a \(f'(x)\) je její derivace.
+Iterujeme, dokud není dosaženo požadované přesnosti.
 
-### b. Logaritmus podílu
-\[ \log_b\left(\frac{x}{y}\right) = \log_b(x) - \log_b(y) \]
+Grafické řešení:
 
-### c. Logaritmus mocniny
-\[ \log_b(x^k) = k \cdot \log_b(x) \]
-
-### 3. Základní aplikace logaritmů
-
-- **Exponenciální rovnice**: Pomocí logaritmů můžeme řešit rovnice, kde neznámou je exponent.
-- **Logaritmické grafy**: Logaritmické měřítko na osách grafů umožňuje zobrazit široký rozsah hodnot.
-- **Analýza dat**: Logaritmy se často používají pro zpracování a analýzu dat, zejména ve statistice a ekonomii.
+Pro jednoduché rovnice, jako je \(e^x = a\), můžeme rovnici vyřešit graficky.
+Nakreslíme graf funkce \(y = e^x\) a horizontální přímku \(y = a\).
+Průsečík těchto dvou grafů nám dá hodnotu \(x\), která splňuje rovnici.
